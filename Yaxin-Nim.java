@@ -22,12 +22,11 @@ public class Nim {
 		int human = 0;
 		int computer = 0;
 		
-		while (beginSticks > 0)
-		{
+		while (beginSticks > 0){
 			System.out.println("Please enter the number of sticks you'll remove (1 or 2): ");
 			human = in.nextInt();
-			while ((human != 2 && human != 1) || (human > beginSticks))
-			{
+			
+			while ((human != 2 && human != 1) || (human > beginSticks)){
 				System.out.println("Please enter a valid number (1 or 2) / a smaller number: ");
 				human = in.nextInt();
 			}
@@ -40,12 +39,10 @@ public class Nim {
 			beginSticks = endSticks;
 			round ++;
 			
-			if (beginSticks > 0)
-			{
+			if (beginSticks > 0){
 				computer = (int) Math.round(Math.random() + 1);
 				
-				while (computer > beginSticks)
-				{
+				while (computer > beginSticks){
 					computer = (int) Math.round(Math.random() + 1);
 				}
 				
@@ -57,13 +54,11 @@ public class Nim {
 				beginSticks = endSticks;
 				round ++;
 				
-				if  (beginSticks == 0)
-				{
+				if (beginSticks == 0){
 					System.out.println("The computer wins / you lose!");
 				}
-			}
-			else
-			{
+				
+			} else {
 				System.out.println("The computer loses / you win!");
 			}
 			

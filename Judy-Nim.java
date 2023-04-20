@@ -12,7 +12,7 @@ public class Nim {
 		int i = 0; //count times
 		
 		
-		while (initialSticks > 0)     {
+		while (initialSticks > 0) {
 			//human move 0,2,4
 			if (i%2 ==0) {
 				//enter number to move
@@ -54,7 +54,6 @@ public class Nim {
 					computerMove = 1;
 					initialSticks = initialSticks - computerMove;
 					System.out.println("Round " + i + ": start computer takes " + computerMove + ", so " + initialSticks + " remain");
-					
 				}
 				//end game
 				if (initialSticks == 0) {
